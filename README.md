@@ -1,2 +1,2 @@
 # learningnode
-This project is for learning node js for myself
+This project is for learning node js 
