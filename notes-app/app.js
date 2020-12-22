@@ -1,10 +1,12 @@
 
 // command line arguments-----------------------------------------Yargs
 // Command : node app.js Name --FirstName="Rakesh" --LastName="Nagapuri"
-const yargs = require('yargs');
+//const yargs = require('yargs');
 //console.log(process.argv[2]);
-yargs.version('1.0.1');
-console.log(yargs.argv);
+//yargs.version('1.0.1');
+//console.log(yargs.argv);
+
+const myYargs = require('./custompackages/myYargs.js');
 
 // chalk example (decorating text) -------------------------------Chalk
 //const chalk = require('chalk');
