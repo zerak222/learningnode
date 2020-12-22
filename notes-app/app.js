@@ -1,6 +1,6 @@
 
 const chalk = require('chalk');
-console.log(chalk.bgRed.inverse.bold('Success:'));
+console.log(chalk.red.cyanBright('Success:'));
 
 // validator example
 //const validator =  require('validator');
