@@ -25,12 +25,18 @@ const addNote = function addNote(title, body){
 const removeNote = function removeNote(title){
     const notes = loadNotes();
     const newNotes = notes.filter(fNote=>fNote.title!==title);
-    if(notes.length===newNotes.length){
-        console.log(chalk.bgRed('No note found'));
-    }else{
+    if(notes.length>newNotes.length){        
         console.log(chalk.bgGreen('Removed a note'));
+        saveNotes(newNotes);
+    }else{
+        console.log(chalk.bgRed('No note found'));
     }
-    saveNotes(newNotes);
+    
+}
+
+const listNotes = function listNotes(){
+    const notes = loadNotes();
+    console.log(notes);
 }
 
 const saveNotes = function(notes){
@@ -48,5 +54,6 @@ const loadNotes = function(){
 module.exports = {
     getNotes : getNotes,
     addNote : addNote,
-    remove  : removeNote
+    remove  : removeNote,
+    list : listNotes
 }
