@@ -44,5 +44,21 @@ yargs.command({
         notes.list();
     }
 });
+// node app.js read --title="t2"
+yargs.command({
+    // node app.js list
+    command : 'read',
+    describe: 'Read the note with given title',    
+    builder:{
+        title:{
+            describe : 'Read Note',
+            demandOption : true,
+            type : 'string'
+        },
+    },
+    handler : function(argv){
+        notes.readNote(argv.title);
+    }
+});
 
 yargs.parse();
